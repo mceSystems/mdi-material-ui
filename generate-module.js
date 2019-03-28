@@ -70,7 +70,7 @@ const pick = require('lodash.pick')
   ].forEach((file) => fse.copySync(path.join(__dirname, file), path.join(__dirname, 'package', file)))
 
   const packageJson = require('./package.json')
-  packageJson.name = 'mdi-material-ui'
+  packageJson.name = '@mcesystems/mdi-material-ui'
   fse.writeFileSync(path.join(__dirname, 'package', 'package.json'), JSON.stringify(pick(packageJson, [
     'name',
     'version',
